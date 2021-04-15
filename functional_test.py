@@ -1,7 +1,7 @@
 from selenium import webdriver
 import unittest
 
-geckodriver_path = r"C:\Program Files\Mozilla Firefox\geckodriver.exe"
+chromedriver_path = r"C:\Users\godle\Documents\chrome_driver_development\chromedriver.exe"
 
 
 #
@@ -10,8 +10,11 @@ class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
         # user enters a website
-        self.browser = webdriver.Firefox(executable_path=geckodriver_path)
+        self.browser = webdriver.Chrome(executable_path=chromedriver_path)
 
+
+    def tearDown(self):
+        self.browser.quit()
 
     def test_can_start_a_list_and_retrieve_it_later(self):
 
