@@ -21,7 +21,6 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get("http://localhost:8000")
         # user notices title
         self.assertIn("To-Do",  self.browser.title)
-        self.fail("Finish the test")
 
 
         # user is invited to add a to-do item
